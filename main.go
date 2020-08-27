@@ -15,5 +15,5 @@ func main() {
 	mux := controller.Register()
 	db := model.Connect()
 	defer db.Close()
-	log.Fatal(http.ListenAndServe(":4444", mux))
+	log.Fatal(http.ListenAndServe(":4545", mux))
 }

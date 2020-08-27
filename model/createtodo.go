@@ -9,3 +9,12 @@ func CreateToDo(name, todo string) error {
 	return nil
 
 }
+func DeleteToDo(name string) error {
+	_, err := con.Query("DELETE FROM TODO WHERE name=?", name)
+	
+	if err != nil {
+		return err
+	}
+	return nil
+
+}

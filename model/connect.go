@@ -9,11 +9,11 @@ import (
 var con *sql.DB
 
 func Connect() *sql.DB {
-	db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/mysql")
+	db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/qwerty")
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println("Connected to the database")
-	con = db
+	con = db 
 	return db
 }
